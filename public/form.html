@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Page</title>
+</head>
+<body>
+  <header class="main-header">
+    <h1>Sellers Page</h1>
+  </header>
+
+  <main>
+    <form id="seller-form" action="/seller/add-seller" method="POST" onsubmit="sellerDetails(event)">
+      <section class="container">
+        <div class="div-container">
+          <lable for="amount">Selling Price</lable>
+          <input type="number" name="amount" id="amount"><br><br>
+
+          <lable for="product">Product Name</lable>
+          <input type="text" name="product" id="product"><br><br>
+
+          
+          <lable for="category">choose a Category</lable>
+          <select name="category" id="category">
+            <option value="food">Food</option>
+            <option value="skinCare">Skin Care</option>
+            <option value="electronicItem">Electronic Item</option>
+          </select><br><br>
+
+        </div>
+
+        <button class="addProduct">Add Producut</button>
+      </section>
+
+    </form>
+    
+    <div class="electronic-class">
+      
+      <ul id="electronicItem"></ul>
+    </div>
+    <div class="Skin-class">
+      
+      <ul id="skinCare"></ul>
+    </div>
+    <div class="food-class">
+      
+      <ul id="food"></ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+    <script type="text/javascript" src="form.js"></script>
+  </main>
+</body>
+</html>
